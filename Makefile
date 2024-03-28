@@ -8,3 +8,7 @@ gram:
 .PHONY: clean
 clean:
 	rm -rf bin
+
+.PHONY: build-proto
+build-proto:
+	buf generate proto

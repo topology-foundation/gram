@@ -37,7 +37,7 @@ func gram() error {
 
 	storage := storage.NewStorage(ctx, &cfg.Storage)
 	execution := execution.NewExecution(ctx, storage, &cfg.Execution)
-	network := network.NewNetwork(ctx, execution, storage, &cfg.Network)
+	network := network.NewNetwork(ctx, execution, storage, &cfg.Network, &cfg.Grpc)
 
 	network.Start()
 
